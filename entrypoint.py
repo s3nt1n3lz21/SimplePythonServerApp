@@ -1,9 +1,9 @@
 import socket
-​
+
 HOST = socket.gethostbyname(socket.gethostname())
 PORT = 3306
 print('Listening for connections from host: ', socket.gethostbyname(socket.gethostname()))
-​
+
 while True:
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.setsockopt(socket.IPPROTO_TCP, socket.TCP_NODELAY, 1)
